@@ -30,13 +30,13 @@ public class SpringRelationshipsApplicationTests {
 	}
 
 	@Test
-	public void createProject(){
+	public void createProject() {
 		Department department = new Department("The Department of Awesome");
 		departmentRepository.save(department);
 
 		Employee employee = new Employee("Ruth", "Ironside", 1, department);
 		employeeRepository.save(employee);
-		
+
 		Employee employee2 = new Employee("Michael", "Anderson", 2, department);
 		employeeRepository.save(employee2);
 
@@ -46,21 +46,5 @@ public class SpringRelationshipsApplicationTests {
 		project.addEmployee(employee2);
 		projectRepository.save(project);
 	}
-
-
-
-//	public void createRaid(){
-//		Ship ship1 = new Ship("Ship For Brains");
-//		shipRepository.save(ship1);
-//
-//		Pirate pirate2 = new Pirate("Angry", "Andy", 38, ship1);
-//		pirateRepository.save(pirate2);
-//
-//		Raid raid = new Raid("Smoo Cave", 200);
-//		raid.addPirate(pirate2);
-//
-//		raidRepository.save(raid);
-//	}
-
 
 }
